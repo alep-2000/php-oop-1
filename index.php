@@ -7,10 +7,17 @@ class Movie {
     public $duration;
     public $cast;
     public $language;
+
+    function __construct($title, $yearOfRelease, $type, $duration){
+        $this->title = $title;
+        $this->yearOfRelease = $yearOfRelease;
+        $this->type = $type;
+        $this->duration = $duration;
+    }
 }
 
-$senzaLimiti = new Movie();
-$arteDellaTruffa = new Movie();
+$senzaLimiti = new Movie("Senza Limiti", "2000", "Drammatic", "100 minutes");
+$arteDellaTruffa = new Movie("L'arte della truffa", "2019", "Detective Story", "100 minutes");
 
 $senzaLimiti->title = "Senza Limiti";
 $senzaLimiti->yearOfRelease = "2000";
@@ -21,13 +28,13 @@ $senzaLimiti->language = "FR";
 
 $arteDellaTruffa->title = "L'arte della truffa";
 $arteDellaTruffa->yearOfRelease = "2019";
-$arteDellaTruffa->type = "Poliziesco";
+$arteDellaTruffa->type = "Detective Story";
 $arteDellaTruffa->duration = "100 minutes";
 $arteDellaTruffa->cast = ["Theo James", "Emily Ratajkowski", "Aris Alvarado", "Fernanda Andrade", "Tim Bader", "Joe Bucaro III", "Frank Clem", "Taji Coleman", "Davie-Blue", "Frank Gallegos", "John Gatins", "Evan Handler", "Orion McCabe", "Fred Melamed", "Ebon Moss-Bachrach", "Ivo Nandi", "Dominic Pace", "Keith Powell", "Bob Stephenson", "Ray Stoney", "Phil Van Tee"];
 $arteDellaTruffa->language = "US";
 
 
-var_dump($senzaLimiti);
-var_dump($arteDellaTruffa);
+// echo $senzaLimiti->title ."<br/>";
+// echo $senzaLimiti->yearOfRelease;
 ?>
 
